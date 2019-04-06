@@ -1,12 +1,15 @@
 package pl.javastart.app;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import pl.javastart.beans.MessagePrinter;
 
+@Configuration
+@ComponentScan(basePackages = "pl.javastart.beans")
 public class SpringDiApp {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringDiApp.class);
         MessagePrinter messagePrinter = ctx.getBean(MessagePrinter.class);
         messagePrinter.printMessage();
         ctx.close();
