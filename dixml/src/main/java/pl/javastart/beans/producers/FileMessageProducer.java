@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("fileMessageProducer")
+@Producer(type = Producer.ProducerType.FILE)
 public class FileMessageProducer implements MessageProducer {
     public String getMessage() {
         return  "File message prooducer: " +System.currentTimeMillis();

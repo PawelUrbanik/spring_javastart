@@ -7,11 +7,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({ElementType.FIELD,
-ElementType.METHOD,
-ElementType.TYPE,
-ElementType.PARAMETER})
+@Target({ElementType.FIELD, ElementType.METHOD, ElementType.TYPE, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Qualifier
-public @interface FileMessage {
+public @interface Producer {
+    ProducerType type();
+    public enum ProducerType{
+        SIMPLE, FILE;
+    }
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import pl.javastart.beans.producers.MessageProducer;
 
 @Component
-@Qualifier("simpleMessageProducer")
+@Producer(type = Producer.ProducerType.SIMPLE)
 public class SimpleMessageProducer implements MessageProducer {
     public String getMessage() {
         return "Example message: " + System.currentTimeMillis() ;
