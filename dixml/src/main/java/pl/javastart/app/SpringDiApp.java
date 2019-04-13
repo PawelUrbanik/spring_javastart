@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import pl.javastart.beans.printers.MessagePrinter;
 
 @Configuration
-@ComponentScan(basePackages = "pl.javastart.beans")
+@ComponentScan(basePackages = "pl.javastart")
 public class SpringDiApp {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringDiApp.class);

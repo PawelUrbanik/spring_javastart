@@ -17,8 +17,9 @@ public class MessagePrinter {
 
     public MessagePrinter() {
     }
+
     @Autowired
-    public MessagePrinter(@Producer(type = Producer.ProducerType.FILE) MessageProducer messageProducer)
+    public MessagePrinter(@Producer(type = Producer.ProducerType.SIMPLE) MessageProducer messageProducer)
     {
         this.messageProducer = messageProducer;
     }
