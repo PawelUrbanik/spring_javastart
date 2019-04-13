@@ -3,7 +3,7 @@ package pl.javastart.app;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import pl.javastart.beans.MessagePrinter;
+import pl.javastart.beans.printers.MessagePrinter;
 
 @Configuration
 @ComponentScan(basePackages = "pl.javastart.beans")
