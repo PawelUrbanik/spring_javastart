@@ -1,0 +1,7 @@
+pl\javastart\config\AppConfig.class
+pl\javastart\config\profile\ProdProfile.class
+pl\javastart\beans\NamesRepository.class
+pl\javastart\config\DatabaseSource.class
+pl\javastart\config\profile\DevProfile.class
+pl\javastart\SpringDiApp.class
+pl\javastart\config\AppConfig$1.class
