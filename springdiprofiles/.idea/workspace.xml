@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dfff4e6-54df-4809-8807-384dd75417db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/javastart/SpringDiApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/javastart/beans/NamesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/javastart/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/javastart/config/DatabaseSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/javastart/config/profile/DevProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/javastart/config/profile/ProdProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springdiscopes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springdiscopes/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring5-di/src/main/java/pl/javastart/spring5di/beans/NamesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring5-di/src/main/java/pl/javastart/spring5di/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring5-di/src/main/java/pl/javastart/spring5di/config/DatabaseSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring5-di/src/main/java/pl/javastart/spring5di/config/profile/DevProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring5-di/src/main/java/pl/javastart/spring5di/config/profile/ProdProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring5-di/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring5-di/src/main/resources/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/javastart/SpringDiApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/javastart/beans/NamesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/javastart/config/AppConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/javastart/config/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/javastart/config/DatabaseSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/javastart/config/profile/DevProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/javastart/config/profile/ProdProfile.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/SpringDiApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,28 +65,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/beans/NamesRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="126">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
                 <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/config/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="31" column="82" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+            <state relative-caret-position="190">
+              <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#645#646#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,15 +185,6 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Spring_4_3_18_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
@@ -202,8 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,39 +220,6 @@
               <item name="springdiprofiles" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springdiprofiles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springdiprofiles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="javastart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springdiprofiles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springdiprofiles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="javastart" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springdiprofiles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springdiprofiles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="javastart" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springdiprofiles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springdiprofiles" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -270,12 +230,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../spring-zadania/di-start" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -330,12 +294,15 @@
       <updated>1555694773024</updated>
       <workItem from="1555694776398" duration="1049000" />
       <workItem from="1561283400827" duration="3633000" />
-      <workItem from="1561481251422" duration="3591000" />
+      <workItem from="1561481251422" duration="4462000" />
+      <workItem from="1561566603903" duration="655000" />
+      <workItem from="1561569684552" duration="557000" />
+      <workItem from="1561570858396" duration="851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8273000" />
+    <option name="totallyTimeSpent" value="11207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -348,9 +315,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26742628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -368,7 +334,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32909605" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32909605" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32909605" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -386,6 +352,13 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -393,10 +366,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/config/profile/ProdProfile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/config/DatabaseSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="126">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -413,41 +386,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/config/profile/ProdProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/beans/NamesRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/SpringDiApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/config/DatabaseSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="210">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -456,12 +398,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="31" column="82" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+        <state relative-caret-position="190">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/beans/NamesRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/javastart/SpringDiApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
