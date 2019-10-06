@@ -21,16 +21,12 @@ public class BookRepository implements GenericRepository<String, Book> {
 
     @Override
     public Book get(String isbn) {
-        /*Instant start = Instant.now();*/
         if (isbn==null || (isbn.length())!= 13) throw new IllegalArgumentException("Book isbn is valid");
         Book find = books.stream()
                 .filter(b->isbn.equals(b.getIsbn()))
                 .findFirst()
                 .get();
         randomPause(300);
-       /* Instant end = Instant.now();
-        Duration between = Duration.between(start, end);
-        System.out.println("Duration time: " + between.toMillis());*/
         return find;
     }
 
