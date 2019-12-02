@@ -7,16 +7,18 @@ import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Arrays;
 
 @Aspect
 @Component
 public class TimeLogger {
 
-    @Around("execution(* pl.javastart.springaop.service.BookRepository.*(..))")
+    @Around("pl.javastart.springaop.aspects.AspectUtil.allBookRepositoryMethods()")
     public Object measureExecTime(ProceedingJoinPoint pjp )throws Throwable{
         Instant before = Instant.now();
         try{
             Object result = pjp.proceed();
+            System.out.printf("Log before %s wit arguments: %s/n", pjp.getSignature(), Arrays.toString(pjp.getArgs()));
             return result;
         }finally {
             Instant after = Instant.now();

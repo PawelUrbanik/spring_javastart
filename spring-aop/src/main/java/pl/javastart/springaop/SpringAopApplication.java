@@ -15,12 +15,12 @@ public class SpringAopApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(SpringAopApplication.class, args);
-        BookRepository repository = ctx.getBean(BookRepository.class);
+        GenericRepository repository = ctx.getBean(BookRepository.class);
         repository.add(new Book("1234567890123", "Pierwsza", "Pierwszy autor"));
         repository.add(new Book("2345678901234", "Druga", "Drugi autor"));
         repository.add(new Book("3456789012345", "Trzecia", "Trzeci autor"));
-        Book book = repository.get("1234567890123");
-        System.out.println(book);
+        Book book = (Book) repository.get("1234567890123");
+        //System.out.println(book);
 
 
         ctx.close();
