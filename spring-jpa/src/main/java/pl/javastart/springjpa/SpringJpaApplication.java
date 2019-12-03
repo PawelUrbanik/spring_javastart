@@ -11,12 +11,14 @@ import pl.javastart.springjpa.model.Book;
 @ComponentScan
 public class SpringJpaApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringJpaApplication.class);
         BookDao bookDao = ctx.getBean(BookDao.class);
         Book book = new Book("Ania", "Tomasz");
         bookDao.save(book);
         System.out.println(bookDao.get(1));
+        Thread.sleep(5000);
+        ctx.close();
 
     }
 
