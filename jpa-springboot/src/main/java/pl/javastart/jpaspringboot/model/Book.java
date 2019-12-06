@@ -55,9 +55,19 @@ public class Book implements Serializable {
     @Override
     public String toString() {
         return "Book{" +
-                "id=" +
+                "id=" + id +
                 ", title='" + title + '\'' +
                 ", Author='" + author + '\'' +
                 '}';
+    }
+
+    @PrePersist
+    public void prePersist(){
+        System.out.println("Zapis obiektu: " + this);
+    }
+
+    @PostPersist
+    public void postPersist(){
+        System.out.println("Zapisano obiekt: " + this);
     }
 }

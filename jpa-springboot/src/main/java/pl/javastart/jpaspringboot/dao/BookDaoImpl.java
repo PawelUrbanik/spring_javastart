@@ -20,10 +20,23 @@ public class BookDaoImpl implements BookDao{
         entityManager.persist(book);
     }
 
-    public Book get(int id) {
+    public Book get(Long id) {
         Book book = entityManager.find(Book.class, id);
-        entityManager.close();
         return book;
+    }
+
+    @Override
+    @Transactional
+    public void update(Book book) {
+    entityManager.merge(book);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Long id) {
+        Book bookDB = entityManager.find(Book.class, id);
+        if (bookDB != null) entityManager.remove(bookDB);
+        System.out.println("Book for id value " + bookDB.getId() + " was deleted");
     }
 
 }
