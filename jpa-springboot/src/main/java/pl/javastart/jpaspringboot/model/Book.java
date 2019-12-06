@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "Books")
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -15,20 +16,25 @@ public class Book implements Serializable {
         this.author = author;
     }
 
-    @EmbeddedId
-    private BookKey bookKey;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(
+            name = "tytul",
+            nullable = false,
+            unique = true
+    )
     private String title;
     //@Transient
     private String author;
 
-    public BookKey getBookKey() {
-        return bookKey;
-    }
 
-    public void setBookKey(BookKey bookKey) {
-        this.bookKey = bookKey;
+    public Long getId() {
+        return id;
     }
-
+    public void setId(Long id) {
+        this.id=id;
+    }
     public String getTitle() {
         return title;
     }
