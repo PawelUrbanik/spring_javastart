@@ -1,9 +1,6 @@
 package pl.javastart.jpaspringboot.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -15,22 +12,21 @@ public class Book implements Serializable {
 
     public Book(String title, String author) {
         this.title = title;
-        Author = author;
+        this.author = author;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
+    @EmbeddedId
+    private BookKey bookKey;
     private String title;
-    private String Author;
+    //@Transient
+    private String author;
 
-    public int getId() {
-        return id;
+    public BookKey getBookKey() {
+        return bookKey;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setBookKey(BookKey bookKey) {
+        this.bookKey = bookKey;
     }
 
     public String getTitle() {
@@ -41,20 +37,21 @@ public class Book implements Serializable {
         this.title = title;
     }
 
+    //@Transient
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        author = author;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "id=" + id +
+                "id=" +
                 ", title='" + title + '\'' +
-                ", Author='" + Author + '\'' +
+                ", Author='" + author + '\'' +
                 '}';
     }
 }
