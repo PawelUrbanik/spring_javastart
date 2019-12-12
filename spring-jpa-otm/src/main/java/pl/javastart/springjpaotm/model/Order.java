@@ -2,6 +2,7 @@ package pl.javastart.springjpaotm.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -13,7 +14,12 @@ public class Order implements Serializable {
     @Column(name = "id_order")
     private Long id;
 
-    private String product;
+    @ManyToMany
+    @JoinTable(name = "order_products",
+            joinColumns = {@JoinColumn(name = "order_id", referencedColumnName = "id_order")},
+            inverseJoinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "id_product")}
+    )
+    private List<Product> products;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
@@ -22,8 +28,8 @@ public class Order implements Serializable {
     public Order() {
     }
 
-    public Order(String product) {
-        this.product = product;
+    public Order(List<Product> products) {
+        this.products = products;
     }
 
     public Long getId() {
@@ -34,12 +40,12 @@ public class Order implements Serializable {
         this.id = id;
     }
 
-    public String getProduct() {
-        return product;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     public Client getClient() {
@@ -54,7 +60,7 @@ public class Order implements Serializable {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", product='" + product + '\'' +
+                //", product='" + products + '\'' +
                 ", client=" + client.getFirstname() +
                 ", client=" + client.getLastname() +
                 '}';
@@ -66,12 +72,12 @@ public class Order implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
         return Objects.equals(id, order.id) &&
-                Objects.equals(product, order.product) &&
+                Objects.equals(products, order.products) &&
                 Objects.equals(client, order.client);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, product, client);
+        return Objects.hash(id, products, client);
     }
 }
