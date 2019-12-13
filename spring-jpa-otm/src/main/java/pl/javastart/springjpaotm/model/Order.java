@@ -60,9 +60,9 @@ public class Order implements Serializable {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                //", product='" + products + '\'' +
                 ", client=" + client.getFirstname() +
                 ", client=" + client.getLastname() +
+                ", product='" + products + '\'' +
                 '}';
     }
 

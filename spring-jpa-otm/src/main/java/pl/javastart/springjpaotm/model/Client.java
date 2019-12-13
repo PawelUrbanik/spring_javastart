@@ -22,7 +22,7 @@ public class Client implements Serializable {
     private String firstname;
     private String lastname;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client",fetch = FetchType.EAGER)
     private List<Order> orders;
 
     public Client(String firstname, String lastname) {

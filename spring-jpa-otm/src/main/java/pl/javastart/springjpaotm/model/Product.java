@@ -66,6 +66,7 @@ public class Product implements Serializable {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                  ", orders number=" + orders.size() +
+
                 '}';
     }
 
