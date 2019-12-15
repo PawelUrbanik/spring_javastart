@@ -5,6 +5,10 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "product_dynamic")
+@NamedQueries({
+        @NamedQuery(name = "Product.findAll", query = "SELECT p FROM Product p"),
+        @NamedQuery(name = "Product.deleteAll", query = "DELETE FROM Product p")
+})
 public class Product implements Serializable {
     public static final long versionUID= 1L;
 
