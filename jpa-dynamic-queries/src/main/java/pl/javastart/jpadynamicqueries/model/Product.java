@@ -7,7 +7,8 @@ import java.io.Serializable;
 @Table(name = "product_dynamic")
 @NamedQueries({
         @NamedQuery(name = "Product.findAll", query = "SELECT p FROM Product p"),
-        @NamedQuery(name = "Product.deleteAll", query = "DELETE FROM Product p")
+        @NamedQuery(name = "Product.deleteAll", query = "DELETE FROM Product p"),
+        @NamedQuery(name = "Product.findByName", query = "SELECT p FROM Product p WHERE p.name = :name")
 })
 public class Product implements Serializable {
     public static final long versionUID= 1L;

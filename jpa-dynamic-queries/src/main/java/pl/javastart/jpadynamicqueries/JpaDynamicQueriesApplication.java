@@ -42,7 +42,9 @@ public class JpaDynamicQueriesApplication {
                 productDao.customGet("SELECT p FROM Product p WHERE p.producer = 'Samsung' AND p.price > 4000");
         expendiveSamsungProducts.forEach(System.out::println);
 
-        System.out.println("Deleted rows: " +  productDao.deleteAll());
+      System.out.println("Get By name: "+ productDao.getByName("Laptop"));
+      System.out.println("Delete by Producer: " + productDao.deleteByProducer("Samsung"));
+      System.out.println("Deleted rows: " +  productDao.deleteAll());
 
       ctx.close();
     }

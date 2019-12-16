@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.StringJoiner;
 
@@ -35,6 +36,14 @@ public class ProductDao {
         return resutList;
     }
 
+    public Product getByName(String name)
+    {
+        TypedQuery<Product> query = entityManager.createNamedQuery("Product.findByName", Product.class);
+        query.setParameter("name", name);
+        List<Product> list = query.getResultList();
+        return list.get(0);
+    }
+
     public int deleteAll()
     {
         Query deleteQuery = entityManager.createNamedQuery("Product.deleteAll");
@@ -46,6 +55,13 @@ public class ProductDao {
     {
         TypedQuery<Product> customQuery = entityManager.createQuery(JpqlQuery, Product.class);
         return customQuery.getResultList();
+    }
+
+    public int deleteByProducer(String producer)
+    {
+        Query query = entityManager.createQuery("DELETE FROM Product p WHERE p.producer = :producer");
+        query.setParameter("producer", producer);
+        return query.executeUpdate();
     }
 
 
