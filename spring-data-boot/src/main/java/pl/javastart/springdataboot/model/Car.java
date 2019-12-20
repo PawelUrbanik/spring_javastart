@@ -1,6 +1,8 @@
 package pl.javastart.springdataboot.model;
 
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +16,7 @@ public class Car {
     private Long id;
 
     private String name;
+    @NotNull
     private String brand;
     private Double price;
 
