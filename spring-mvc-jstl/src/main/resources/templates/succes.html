@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Succes</title>
+</head>
+<body>
+<h1 th:text="${formArticle.title}"></h1>
+<p th:text="${formArticle.content}"></p>
+<!--<p th:text="${formArticle.tags}"></p>-->
+<div th:if="${formArticle.tags != null}">
+    <h4>Lista tagów</h4>
+    <ul>
+        <li th:each="item : ${formArticle.tags}" th:text="${item}">Item description here...</li>
+    </ul>
+</div>
+
+</body>
+</html>
