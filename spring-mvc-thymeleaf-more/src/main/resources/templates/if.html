@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="https://thymyleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>If example</title>
+</head>
+<body>
+<h2>Is text.ength()>5</h2>
+<p th:if="${text.length()} > 5">Yes</p>
+<p th:unless="${text.length()} >5">No</p>
+<p th:if="${text.length()} > 5" th:text="${text}">Some example texxt</p>
+
+<h2 th:text="'Is ' + ${a} + '>' + ${b}+ '?'"></h2>
+<h2 th:text="${a} > ${b}"></h2>
+
+</body>
+</html>
