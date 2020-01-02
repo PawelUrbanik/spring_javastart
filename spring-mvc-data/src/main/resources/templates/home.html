@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+<h1> Add new time</h1>
+<form action="#" method="post" th:action="@{/save}" th:object="${timeData}">
+    <p>Firstname</p><input type="text" th:field="*{firstName}"><br>
+    <p>Lastname</p>
+    <input type="text" th:field="*{lastName}"><br>
+    <h2>Time </h2>
+    <p>H:</p><input type="number" th:field="*{hours}">
+    <p>M:</p><input type="number" th:field="*{minutes}">
+    <p>s:</p><input type="number" th:field="*{seconds}"><br>
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>
