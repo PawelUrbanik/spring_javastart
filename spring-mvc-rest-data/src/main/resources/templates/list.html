@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cities</title>
+</head>
+<body>
+<h1>List of all Cities</h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Population</th>
+    </tr>
+    <tr th:each="city:${cities}">
+        <td th:text="${city.name}"></td>
+        <td th:text="${city.population}"></td>
+    </tr>
+</table>
+
+<a th:href="@{/}">Homepage</a>
+</body>
+</html>

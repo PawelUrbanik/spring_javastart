@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna</title>
+</head>
+<body>
+
+<h1>Strona główna</h1>
+<p th:text="${message}">Example Text</p>
+<form th:action="@{/cities}" th:object="${cityModel}" th:method="post">
+    <input type="text" th:field="*{name}" placeholder="Name"><br>
+    <input type="number" th:field="*{population}"><br>
+    <input type="submit" value="Add">
+</form>
+<br>
+<a th:href="@{/cities}">List of all cities</a>
+</body>
+</html>
