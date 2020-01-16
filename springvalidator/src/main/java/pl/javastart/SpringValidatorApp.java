@@ -1,9 +1,11 @@
 package pl.javastart;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
+import org.springframework.validation.Validator;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import pl.javastart.Service.PersonService;
 import pl.javastart.model.Person;
 
@@ -28,6 +30,11 @@ public class SpringValidatorApp {
         personService.getPeople().forEach(System.out::println);
 
         ctx.close();
+    }
+
+    @Bean
+    public Validator validator(){
+        return new LocalValidatorFactoryBean();
     }
 
 }

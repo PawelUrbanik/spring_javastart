@@ -1,10 +1,18 @@
 package pl.javastart.model;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 public class Person {
 
+    @NotNull
     private String firstname;
+    @NotNull
     private String lastname;
+    @Email
     private String email;
+    @Min(1)
     private int age;
 
     public Person() {

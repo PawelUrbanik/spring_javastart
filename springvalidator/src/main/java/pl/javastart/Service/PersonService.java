@@ -14,14 +14,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@PropertySource("classpath:error_messages.properties")
 public class PersonService {
 
     private Set<Person> people;
     private Validator validator;
-
-    @Autowired
-    Environment env;
 
     @Autowired
     public PersonService(Validator validator)
@@ -38,7 +34,7 @@ public class PersonService {
             System.out.printf("There are errors: %d: \n", errors.getErrorCount());
             for (ObjectError error: errors.getAllErrors())
             {
-                System.out.println(env.getProperty(error.getCode()));
+                System.out.println(error.getDefaultMessage());
             }
         }
         else {
