@@ -1,0 +1,13 @@
+package pl.javastart.springvalidatormessages;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringValidatorMessagesApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
