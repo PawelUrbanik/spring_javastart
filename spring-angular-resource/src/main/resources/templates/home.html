@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Home View</title>
+</head>
+<body>
+<div ng-controller="ProductController as prodControl">
+<ul>
+    <li ng-repeat="prod in prodControl.products" ng-click="prodControl.loadData(prod.id)">
+        {{prod.name}} - {{prod.producer}} - {{prod.kcal}} kcal
+    </li>
+</ul>
+
+    <form>
+    <input type="text" ng-model="prodControl.product.name" placeholder="Name">
+    <input type="text" ng-model="prodControl.product.producer" placeholder="Producer">
+    <input type="text" ng-model="prodControl.product.kcal" placeholder="Kcal">
+    <button ng-click="prodControl.addProduct(prodControl.product)">Add Product</button>
+</form>
+
+    <div ng-show="prodControl.details">
+        <h2>{{prodControl.details.name}}</h2>
+        <p>{{prodControl.details.producer}}  - {{prodControl.details.kcal}}</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

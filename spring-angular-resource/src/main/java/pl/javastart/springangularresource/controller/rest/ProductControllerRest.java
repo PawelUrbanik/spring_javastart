@@ -1,14 +1,11 @@
-package pl.javastart.springangularhttp.controller.rest;
+package pl.javastart.springangularresource.controller.rest;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pl.javastart.springangularhttp.model.Product;
-import pl.javastart.springangularhttp.service.ProductService;
+import pl.javastart.springangularresource.model.Product;
+import pl.javastart.springangularresource.service.ProductService;
 
-import javax.security.auth.kerberos.KerberosTicket;
-import javax.swing.*;
 import java.util.List;
 import java.util.Optional;
 
